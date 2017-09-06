@@ -14,11 +14,10 @@
 
 </head>
 <body ng-app='sampleApp'>
-  <a href="#/first-msg">first</a>
+  <a ui-sref="root()">home</a>
+  <a ui-sref="firstMessage()">first</a>
+  <a ui-sref="secondMessage()">second</a>
   <div ui-view>
   </div>
-  <script type="text/ng-template" id="first.html">
-  first message
-</script>
 </body>
 </html>
