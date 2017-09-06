@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- angular -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"></script>
+
+  <!-- angular route -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.js"></script>
+
+  <!-- custom script (angular app) -->
+  <script type="text/javascript" src="js/app.js"></script>
+
+</head>
+<body ng-app='sampleApp'>
+  <a href="#/first-msg">first</a>
+  <div ui-view>
+  </div>
+  <script type="text/ng-template" id="first.html">
+  first message
+</script>
+</body>
+</html>
