@@ -1,27 +1,27 @@
 console.log('app.js is linked');
 var app = angular.module('sampleApp', ['ui.router']);
 app.config(['$stateProvider','$urlRouterProvider', function($stateProvider,$urlRouterProvider) {
-  $stateProvider.state('firstMessage', {
-    url: '/first-msg',
-    templateUrl: 'first.html',
-    controller: 'first'
-  })
-  .state('secondMessage', {
-    url: '/second-msg',
-    templateUrl: 'second.html',
-    controller: 'second'
+
+  $stateProvider
+  .state('itemDetails', {
+    url: '/{itemName}/{quantity}',
+    templateUrl: 'itemDetails.html',
+    controller: 'itemDetails'
   })
   .state('root', {
     url: '/',
-    templateUrl: 'home.html'
+    templateUrl: 'home.html',
+    controller: 'home'
   });
   $urlRouterProvider.otherwise('/')
 }]);
-app.controller('first', ['$scope', function($scope) {
-  $scope.a = 10;
-  $scope.b = 20;
+
+app.controller('home', ['$scope', '$stateParams', function($scope, $stateParams) {
+  $scope.list = [{itemName: 'cookies', quantity: '30'},
+                {itemName:'milk', quantity: '1'},
+                {itemName:'eggs', quantity:'24'}];
 }]);
-app.controller('second', ['$scope', function($scope) {
-  $scope.c = 20;
-  $scope.d = 30;
+app.controller('itemDetails', ['$scope', '$stateParams', function($scope, $stateParams) {
+  $scope.itemName = $stateParams.itemName;
+  $scope.quantity = $stateParams.quantity;
 }]);

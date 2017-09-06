@@ -1,1 +1,9 @@
 <h1>Home</h1>
+<div ng-controller="home">
+        I have {{list.length}} items for shopping. They are:
+        <ul>
+          <li ng-repeat="item in list">
+            <a ui-sref="itemDetails({itemName: item.itemName, quantity: item.quantity})">[{{$index + 1}}] {{item.itemName}}.</a>
+          </li>
+        </ul>
+    </div>

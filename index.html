@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="sampleApp">
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- angular -->
@@ -14,10 +15,16 @@
 
 </head>
 <body ng-app='sampleApp'>
-  <a ui-sref="root()">home</a>
-  <a ui-sref="firstMessage()">first</a>
-  <a ui-sref="secondMessage()">second</a>
-  <div ui-view>
+  <div class="row">
+    <div class="col-sm-12 well">
+      <a ui-sref="root()">home</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-9 well">
+      <div ui-view>
+      </div>
+    </div>
   </div>
 </body>
 </html>
