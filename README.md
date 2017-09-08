@@ -1,5 +1,5 @@
 # How to run the application?
-- Download the contents of the repository and open the index.html file in your browser.
+- Download the contents of the repository ,start a local server to serve the page.(I used `python -m SimpleHTTPServer`)
 - The application has code for demonstrating the scenarios listed in Angular Test.pdf using ui-router
 - There is a hard-coded shopping list in my app controller.
 - Each item is listed by name on the home page
