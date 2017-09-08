@@ -4,3 +4,4 @@
 - There is a hard-coded shopping list in my app controller.
 - Each item is listed by name on the home page
 - Clicking on each item takes us to the item details page    where it also gives us the quantity along with the name of each item.
+- I have used ui-router and passed the parameters to the states to display corresponding templates.
